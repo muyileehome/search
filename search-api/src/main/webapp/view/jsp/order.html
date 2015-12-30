@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+<script>
+
+    function placeOrder(){
+        if(document.getElementById("name").value==""){
+            alert("i am sorry,you must provider your name before submit")
+        }
+    }
+    function parseDonut(donutString){
+        var dount=parseInt(donutString);
+        if(donutString.indexOf("dozen")!=-1){
+            dount=dount*12
+        }
+        return dount
+    }
+    function updateOrder(){
+        const DONUTPRICE=0.5;
+        var numCakeDonut=parseDonut(document.getElementById("numCakeDonut").value)
+        if(isNaN(numCakeDonut)){
+            numCakeDonut=0
+        }
+        document.getElementById("subtotal").value="$"+(DONUTPRICE*numCakeDonut).toFixed(2)
+    }
+    function greetUser(){
+        readCookie()
+    }
+
+</script>
+<form action="" method="post" >
+    name：<input type="text" id="name" /><br>
+    of cake donuts:<input type="text" id="numCakeDonut" onmousemove="updateOrder()" /> <br>
+    subtotal:<input type="text" id="subtotal" /> <br>
+    <input type="submit" title="提交" onclick="placeOrder()"  >
+</form>
+</body>
+</html>
