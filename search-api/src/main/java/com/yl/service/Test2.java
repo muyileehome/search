@@ -15,5 +15,7 @@ public class Test2 {
     public static void main(String[] args) {
         System.out.println("hello world");
         //这是第二个bug哦
+        //这里不对，我进行了修改
+        //修改吧
     }
 }
