@@ -26,34 +26,6 @@
 		</rollingPolicy>
 	</appender>
 
-	<!-- 报警邮件 -->
-<!--	<appender name="EMAIL" class="ch.qos.logback.classic.net.SMTPAppender">
-		<SMTPHost>mail.iqiyi.com</SMTPHost>
-		<To>liyingjie@qiyi.com</To>
-		<From>tp_be_monitor@qiyi.com</From>
-		<Username>tp_be_monitor</Username>
-		<Password>123ppsList2</Password>
-		<Subject>pps-operation error : %logger{20} - %m</Subject>
-		<layout class="ch.qos.logback.classic.PatternLayout">
-			<Pattern>[%d] %5p %c{1}:%L - %m%n</Pattern>
-		</layout>
-		<evaluator class="tv.pps.operation.util.LimitingOnMarkerEvaluator">
-			<interval>1800000</interval>
-			&lt;!&ndash; 需要间隔发送邮件的类名，逗号分隔 &ndash;&gt;
-			<loggerName></loggerName>
-		</evaluator>
-	</appender>-->
-	<!-- 日志入库 -->
-	<!-- <appender name="DB" class="ch.qos.logback.classic.db.DBAppender">
-		<connectionSource class="ch.qos.logback.core.db.DataSourceConnectionSource">
-			<dataSource class="com.mchange.v2.c3p0.ComboPooledDataSource">
-				<driverClass>com.mysql.jdbc.Driver</driverClass>
-				<jdbcUrl>jdbc:mysql://jy.kylin.w.qiyi.db:8478/kylin</jdbcUrl>
-				<user>kylin</user>
-				<password>u&amp;7)bBq)</password>
-			</dataSource>
-		</connectionSource>
-	</appender> -->
 	<root level="debug">
 		<!-- 输出至控制台 -->
 		<appender-ref ref="CONSOLE" />
