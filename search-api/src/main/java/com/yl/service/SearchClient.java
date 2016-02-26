@@ -109,5 +109,8 @@ public class SearchClient {
     }
 
     public static void main(String[] args) {
+        SearchClient searchClient=new SearchClient();
+        String json="{\"name\":\"name\"}";
+        searchClient.post("ssm","people",json);
     }
 }
